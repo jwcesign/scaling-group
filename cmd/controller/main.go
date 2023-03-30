@@ -1,5 +1,5 @@
 /*
-Copyright 2019 The Knative Authors
+Copyright 2023 The Knative Authors
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -20,13 +20,17 @@ import (
 	// The set of controllers this controller process runs.
 	"knative.dev/sample-controller/pkg/reconciler/addressableservice"
 	"knative.dev/sample-controller/pkg/reconciler/simpledeployment"
+	"knative.dev/sample-controller/vendor/knative.dev/pkg/injection"
 
 	// This defines the shared main for injected controllers.
 	"knative.dev/pkg/injection/sharedmain"
 )
 
+var ctors = []injection.ControllerConstructor{}
+
 func main() {
-	sharedmain.Main("controller",
+
+	sharedmain.Main("scaling-group-controller",
 		addressableservice.NewController,
 		simpledeployment.NewController,
 	)

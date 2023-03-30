@@ -13,5 +13,5 @@ TBD
 ## Installation
 TBD
 
-## Performers test
+## Performance test
 TBD

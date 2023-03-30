@@ -14,9 +14,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package samples
+package serving
 
 const (
 	// GroupName is the name of the API group.
-	GroupName = "samples.knative.dev"
+	GroupName = "serving.knative.dev"
 )
